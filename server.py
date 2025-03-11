@@ -27,10 +27,10 @@ CLASSES = ['Bacteria', 'Early Blight', 'Fungi', 'Healthy', 'Late Blight', 'Pest'
 
 def load_model():
     global MODEL
-    model_path = os.environ.get('MODEL_PATH', 'models/potato_disease_model.h5')
+    model_path = os.environ.get('MODEL_PATH', 'models/PatatoTuberDisease_model.keras')
     
     try:
-        logger.info(f"Loading model from {model_path}")
+        logger.info(f"Loading mode l from {model_path}")
         start_time = time.time()
         MODEL = tf.keras.models.load_model(model_path)
         logger.info(f"Model loaded successfully in {time.time() - start_time:.2f} seconds")
